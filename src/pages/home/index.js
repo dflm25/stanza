@@ -1,16 +1,21 @@
+/**
+ * This source code is the confidential, proprietary information of
+ * Stanza, you may not disclose such information,
+ * and may only use it in accordance with the terms of the license
+ * agreement you entered into with Stanza.
+ *
+ * Stanza
+ * All Rights Reserved.
+ */
+
 // Redux
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as globalActions from '../../redux/actions/global';
+
+import * as globalActions from '../../redux/stores/app/actions';
 
 // Component
-import Home from './view';
-
-/**
- * @file index.js
- * @author Daniel Felipe Lucumi Marin
- * @description Home page
- */
+import View from './view';
 
 /**
  * Map state to props
@@ -18,7 +23,6 @@ import Home from './view';
  */
 export const mapStateToProps = (state) => ({
   loading: state.Global.loading,
-  user: state.Auth.user,
 });
 
 /**
@@ -30,4 +34,4 @@ export const mapDispatchToProps = (dispatch) => ({
   globalAction: bindActionCreators(globalActions, dispatch),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(View);

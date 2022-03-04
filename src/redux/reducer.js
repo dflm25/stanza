@@ -8,9 +8,11 @@
  * All Rights Reserved.
  */
 
-// Global
-export const SET_LOADING = 'SET_LOADING';
-export const CREATE_TASK = 'CREATE_TASK';
-export const REMOVE_TASK = 'REMOVE_TASK';
-export const UPDATE_TASK = 'UPDATE_TASK';
-export const CLEAR_TASK = 'CLEAR_TASK';
+import { combineReducers } from 'redux';
+import Global from './stores/app/reducer';
+
+const RootReducer = combineReducers({
+  Global,
+});
+
+export default RootReducer;
