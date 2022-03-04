@@ -1,0 +1,19 @@
+@import '../../assets/scss/colors.scss';
+@import '../../assets/scss/font.scss';
+
+.card-container {
+  width: 100%;
+  max-width: 780px;
+
+  img {
+    width: 100%;
+    max-width: 780px;
+    border-radius: 5px;
+  }
+
+  h3 {
+    font-size: 1.4em;
+    font-weight: 300;
+    margin: 5px 0;
+  }
+}

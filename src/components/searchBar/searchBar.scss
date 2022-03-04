@@ -1,0 +1,25 @@
+@import '../../assets/scss/colors.scss';
+@import '../../assets/scss/font.scss';
+
+.search-bar-container {
+  display: flex;
+  align-items: center;
+  color: $secundary;
+  padding: 10px 26px;
+  width: 100%;
+  border-bottom: 1px solid $line;
+
+  input {
+    margin-left: 8px;
+    border: none;
+    padding: 8px;
+    font-size: 0.8em;
+
+    &:focus {
+      outline: none;
+    }
+    &:placeholder {
+      font-weight: bold;
+    }
+  }
+}
