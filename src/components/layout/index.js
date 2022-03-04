@@ -10,18 +10,10 @@
 
 import React from 'react';
 
-// components
-import Layout from '../../components/layout';
+import '../../assets/scss/style.scss';
 
-function View() {
-  return (
-    <Layout>
-      <main>
-        <h2>Welcome to the homepage!</h2>
-        <p>You can do this, I believe in you.</p>
-      </main>
-    </Layout>
-  );
+function Layout({ children }) {
+  return <div className='app-layout'>{children}</div>;
 }
 
-export default View;
+export default Layout;
