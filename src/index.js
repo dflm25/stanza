@@ -1,12 +1,21 @@
+/**
+ * This source code is the confidential, proprietary information of
+ * Stanza, you may not disclose such information,
+ * and may only use it in accordance with the terms of the license
+ * agreement you entered into with Stanza.
+ *
+ * Stanza
+ * All Rights Reserved.
+ */
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import Routes from './routes';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Routes />
   </React.StrictMode>,
   document.getElementById('root')
 );
