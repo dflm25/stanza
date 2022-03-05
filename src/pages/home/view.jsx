@@ -17,22 +17,29 @@ import Card from '../../components/card';
 import CardContainer from '../../components/cardContainer';
 
 // Utils
-import { parseInfoAndGroup } from '../../utils';
+import { parseInfoAndGroup, filterData } from '../../utils';
 
 function View({ eventActions: { getEvents } }) {
   const [events, setEvents] = useState(false);
+  const [copy, setCopy] = useState(false);
 
   useEffect(() => {
     getEvents(async (type, response) => {
       if (type === 'success') {
         setEvents(parseInfoAndGroup(response));
+        setCopy(response);
       }
     });
   }, []);
 
+  const filterQuery = (query) => {
+    const filtered = filterData(copy, query);
+    setEvents(filtered);
+  };
+
   return (
     <Layout>
-      <SearchBar />
+      <SearchBar filter={filterQuery} />
       <div className='cards-container'>
         {Object.keys(events).map((keyName, i) => (
           <CardContainer

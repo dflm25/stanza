@@ -1,8 +1,8 @@
 import moment from 'moment';
 
 export const parseInfoAndGroup = (data) => {
-  console.log(data);
   const list = {};
+
   for (let i = 0; i < data.length; i++) {
     const mth = moment(data[i].when).format('MMMM YYYY');
     if (!list[mth]) {
@@ -16,6 +16,10 @@ export const parseInfoAndGroup = (data) => {
     });
   }
 
-  // console.log(list);
   return list;
+};
+
+export const filterData = (data, param) => {
+  const filtered = data.filter((item) => item.name.includes(param.query));
+  return parseInfoAndGroup(filtered);
 };
