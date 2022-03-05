@@ -15,12 +15,12 @@ import PostDate from '../postDate';
 // css
 import './card.scss';
 
-function View({ eventTime, title, image }) {
+function View({ when, name, image }) {
   return (
     <div className='card-container'>
-      <PostDate eventTime={eventTime} />
-      <img src={image} alt={title} />
-      <h3>{title}</h3>
+      <PostDate eventTime={when} />
+      <img className='' src={image} alt={name} />
+      <h3>{name}</h3>
     </div>
   );
 }

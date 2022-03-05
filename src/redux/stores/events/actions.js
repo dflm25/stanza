@@ -10,8 +10,9 @@
 
 import { GET_EVENTS, RENDER_EVENTS } from './constants';
 
-export const getMessages = (page, room) => ({
+export const getEvents = (cb) => ({
   type: GET_EVENTS,
+  cb,
 });
 
 export const renderEvents = (messages) => ({

@@ -1,0 +1,20 @@
+@import '../../assets/scss/breakpoints.scss';
+
+.card-container-month {
+  h2 {
+    font-size: 18px;
+    margin-bottom: 60px;
+    font-weight: 300;
+  }
+
+  .card-container-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media (min-width: $laptop) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+}

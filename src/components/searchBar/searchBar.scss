@@ -5,9 +5,13 @@
   display: flex;
   align-items: center;
   color: $secundary;
-  padding: 10px 26px;
+  padding: 10px 0px;
   width: 100%;
   border-bottom: 1px solid $line;
+
+  svg {
+    margin-left: 30px;
+  }
 
   input {
     margin-left: 8px;

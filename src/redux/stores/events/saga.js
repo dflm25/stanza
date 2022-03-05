@@ -12,23 +12,22 @@ import { put, call, takeLatest } from 'redux-saga/effects';
 
 // Redux
 import { setResponse } from '../app/actions';
-import { renderEvents } from './actions';
 
 // Utils
 import request from '../../../utils/request';
+import data from '../../../utils/lakers-events.json';
 
 // Constants
 import { GET_EVENTS } from './constants';
 
 function* getEvents(action) {
   const { cb } = action;
-
-  const url = `/message/paginate`;
+  const url = `/lakers-events-copy.json`;
   const requestOptions = { method: 'GET' };
 
   try {
-    const response = yield call(request, url, requestOptions);
-    yield put(renderEvents(response));
+    // const response = yield call(request, url, requestOptions);
+    yield put(setResponse('success', false, false, data, cb));
   } catch (error) {
     yield put(setResponse('error', false, false, error, cb));
   }
