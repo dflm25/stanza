@@ -13,7 +13,6 @@ import React, { useState, useEffect } from 'react';
 // components
 import Layout from '../../components/layout';
 import SearchBar from '../../components/searchBar';
-import Card from '../../components/card';
 import CardContainer from '../../components/cardContainer';
 
 // Utils
