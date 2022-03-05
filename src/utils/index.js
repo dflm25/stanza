@@ -12,7 +12,7 @@ export const parseInfoAndGroup = (data) => {
     list[mth].push({
       name: data[i].name,
       date: data[i].when,
-      image: data[i].images.medium,
+      image: data[i].background,
     });
   }
 
