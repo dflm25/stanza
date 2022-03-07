@@ -20,7 +20,7 @@ function AppRoutes() {
     <div className='App'>
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route component={NotFound} />
+        <Route path='*' element={<NotFound />} />
       </Routes>
     </div>
   );

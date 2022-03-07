@@ -9,6 +9,7 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // Components
 import Card from '../card';
@@ -29,5 +30,10 @@ function View({ events, month }) {
     </div>
   );
 }
+
+View.propTypes = {
+  month: PropTypes.string.isRequired,
+  events: PropTypes.arrayOf(PropTypes.object),
+};
 
 export default View;

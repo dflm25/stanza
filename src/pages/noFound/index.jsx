@@ -11,21 +11,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+// components
+import Layout from '../../components/layout';
+
+// Style
+import './noFound.scss';
+
 function NoFound() {
   return (
-    <div
-      className='mainbox'
-      style={{ backgroundColor: '#20c997', height: '100vh' }}
-    >
-      <div className='err'>4</div>
-      <div className='err2'>4</div>
-      <div className='msg'>
-        Pagina no encontrada
-        <p>
-          Ir al <Link to='/'>Inicio</Link>...
-        </p>
+    <Layout>
+      <div className='nofound-container'>
+        <div className='err'>404</div>
+        <div className='msg'>
+          Page no Found
+          <p>
+            Go to <Link to='/'>home</Link>...
+          </p>
+        </div>
       </div>
-    </div>
+    </Layout>
   );
 }
 

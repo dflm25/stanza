@@ -9,6 +9,7 @@
  */
 
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
 // components
 import Layout from '../../components/layout';
@@ -51,5 +52,11 @@ function View({ eventActions: { getEvents } }) {
     </Layout>
   );
 }
+
+View.propTypes = {
+  eventActions: PropTypes.shape({
+    getEvents: PropTypes.func,
+  }).isRequired,
+};
 
 export default View;

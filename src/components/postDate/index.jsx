@@ -9,6 +9,7 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import moment from 'moment';
 
 // css
@@ -22,5 +23,11 @@ function View({ eventTime }) {
     </div>
   );
 }
+
+View.propTypes = {
+  eventTime: PropTypes.string.isRequired,
+};
+
+View.propTypes = {};
 
 export default View;

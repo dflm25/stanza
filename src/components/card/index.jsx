@@ -9,7 +9,9 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 
+// components
 import PostDate from '../postDate';
 
 // css
@@ -24,5 +26,13 @@ function View({ when, name, image }) {
     </div>
   );
 }
+
+View.propTypes = {
+  when: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+};
+
+View.propTypes = {};
 
 export default View;

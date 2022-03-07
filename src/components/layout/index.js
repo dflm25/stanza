@@ -9,11 +9,17 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 
+// Style
 import '../../assets/scss/style.scss';
 
 function Layout({ children }) {
   return <div className='app-layout'>{children}</div>;
 }
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 
 export default Layout;
